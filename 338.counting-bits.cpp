@@ -1,0 +1,23 @@
+// @leet imports start
+#include <bits/stdc++.h>
+using namespace std;
+// @leet imports end
+
+#include <vector>
+
+using namespace std;
+
+// @leet start
+class Solution
+{
+public:
+    vector<int> countBits(int n)
+    {
+        vector<int> res(n + 1, 0);
+        for (int i = 1; i <= n; ++i) {
+            res[i] = res[i/2] + (i & 1);
+        }
+        return res;
+    }
+};
+// @leet end
