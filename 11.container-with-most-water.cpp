@@ -11,3 +11,14 @@ public:
     }
 };
 // @leet end
+
+int main()
+{
+    vector<int> heights;
+    int h;
+    while (cin >> h) {
+        heights.push_back(h);
+    }
+    cout << Solution{}.maxArea(heights) << endl;
+    return 0;
+}
